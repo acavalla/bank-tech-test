@@ -1,4 +1,12 @@
+![language-ruby](https://img.shields.io/badge/language-ruby-red) ![version-2.7.2](https://img.shields.io/badge/version-2.7.2-yellow) ![coverage-score](https://img.shields.io/badge/coverage-100%-blue) ![build](https://img.shields.io/badge/build-passing-brightgreen)
 # Bank tech test
+
+## How to run
+
+1. Clone this repo: `git clone https://github.com/acavalla/bank-tech-test.git`
+2. To run the test suite, run `rspec`
+3. Open the Ruby REPL `irb -r runfile.rb`. Please see below for demo of functionality.
+
 
 This is a mock tech test for week 10 of Maker's Academy. I took a day and a half to build three classes, of which Bank is the dependant, and Transaction and Statement the dependencies. The trade-off benefit of the dependency introduced by the extra classes was to adhere better to the SRP. It made it more complicated as I had to add mocks to inject dependency, but it was a good opportunity to practise my mocking skills.
 
@@ -55,8 +63,9 @@ Keeps track of amounts, date, current balance
 Methods: initialize
 Instance variables: details hash { amount, date, balance }
 
-## irb
-```$ irb -r "./lib/bank"
+
+```Ruby
+$ irb -r "./lib/runfile"
 2.7.2 :001 > bank = Bank.new
  => #<Bank:0x00007fc65b9c25d8 @balance=0, @transactions=[]>
 2.7.2 :002 > bank.transaction(100, "01.01.2000")
